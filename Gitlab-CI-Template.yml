@@ -48,8 +48,9 @@ build:
 #  script:
     # you must configure and authenticate using CLI commands (no browser available)
     # The following lines are only used to configure/auth cgloud (note the Google service account is used with a GitLab project secret variables!)
+    # also enable resourcec management api manually: https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview
     #
-    # - echo $GCP_SERVICE_KEY > $HOME/servicekey.json #service account json file is defined in decret variable and echoed inside the runner container
+    # - echo $GCP_SERVICE_KEY > $HOME/servicekey.json #service account json file is defined in secret variable and echoed inside the runner container
     # - gcloud config configurations create exampleconf
     # - gcloud auth activate-service-account --key-file $HOME/servicekey.json
     # - rm ${HOME}/servicekey.json
