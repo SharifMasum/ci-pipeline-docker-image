@@ -1,5 +1,8 @@
 """Create python flask wrapper around our buzz generator"""
 import os
+import collections
+from collections import abc
+collections.MutableMapping = abc.MutableMapping
 from flask import Flask
 from buzz import generator
 
