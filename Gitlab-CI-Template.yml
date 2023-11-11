@@ -38,6 +38,7 @@ build:
   - msd
 
 # In here, you want to deploy a container to Kubernetes.
+# Create a new kubernetes cluster by hand or via api, up to you. Note that examples are made for autopilot, so you may want to use standard!!!
 
 #deploy:
 #  stage: deploy
