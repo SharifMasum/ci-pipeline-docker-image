@@ -63,7 +63,7 @@ build:
     # - kubectl get nodes
     #
     # Authenticate to JAMK's GitLab (by creating a new secret in your Kubernetes environment, only needed once)
-    # The following line uses gitlab variables and manually created user token (setup as secret variable)
+    # The following line uses gitlab variables and manually created user access token in gitlab (setup as secret variable)
     # kubectl create secret docker-registry jamkgitlab --docker-server=gitlab.labranet.jamk.fi:4567 --docker-username=$GITLAB_USER_LOGIN --docker-password=$GITLAB_TOKEN --docker-email=$GITLAB_USER_EMAIL
     #
     # how to apply a new service&deployment?
