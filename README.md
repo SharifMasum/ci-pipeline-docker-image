@@ -29,14 +29,14 @@
 
 ---
 
-* **The fourth step**
+* **The fourth step (optional)**
 * At this stage you'll get familiar with Kubernetes
 * Build a new yaml file that you can deploy your container in Kubernetes (service&deployment)
 * Test that it works on your local environment
 
 ---
 
-* **The fifth step**
+* **The fifth step (optional)**
 * Now you have managed to deploy app to a Kubernetes and have tested GitLab-CI  
 * Now comes automate container deployment in Kubernetes  
 * Now modify the .gitlab-ci.yml file to that way that it deploys a container in your Kubernetes cluster
