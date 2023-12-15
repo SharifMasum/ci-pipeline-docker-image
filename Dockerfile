@@ -10,4 +10,4 @@ EXPOSE 5000
 
 ENV NAME World
 
-ENTRYPOINT ["python", "src/app.py"]
+CMD ["python", "src/app.py"]
