@@ -29,7 +29,7 @@ docker_build:
   stage: build
   image:
     name: docker:stable
-    cmd: ["", ""]
+    entrypoint: ["", ""]
   services:
     - docker:dind
   script:
