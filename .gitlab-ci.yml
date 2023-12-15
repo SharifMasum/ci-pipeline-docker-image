@@ -1,0 +1,42 @@
+# Change the filename to: .gitlab-ci.yml
+#
+# The following template uses LabraNet's runner that has a Docker executor
+
+# Define a pipeline stages
+stages:
+  - test
+  - build
+  #- deploy
+
+# Execute a unit tests. This stage should be working out of the box.
+# You can test the outcome by changing the values by changing the "test_pointless_function" values in tests.py file
+unit_test:
+  stage: test
+  image: python:3.6
+  script:
+    - pip install xmlrunner
+    - python ./src/tests.py
+  only:
+    - master
+  tags:
+    - general
+  artifacts:
+    paths:
+      - test-reports/TEST-*.xml
+
+# Build and push Docker image
+docker_build:
+  stage: build
+  image:
+    name: docker:stable
+    entrypoint: ["", ""]
+  services:
+    - docker:dind
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $CI_REGISTRY_IMAGE .
+    - docker push $CI_REGISTRY_IMAGE
+  only:
+    - master
+  tags:
+    - msd
