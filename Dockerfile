@@ -10,4 +10,4 @@ EXPOSE 5000
 
 ENV NAME World
 
-ENTRYPOINT ["bash", "./src/app.py"]
+ENTRYPOINT ["sh", "./src/app.py"]
