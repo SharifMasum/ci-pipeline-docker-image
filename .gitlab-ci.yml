@@ -1,15 +1,9 @@
-# Change the filename to: .gitlab-ci.yml
-#
-# The following template uses LabraNet's runner that has a Docker executor
-
 # Define a pipeline stages
 stages:
   - test
   - build
-  #- deploy
 
 # Execute a unit tests. This stage should be working out of the box.
-# You can test the outcome by changing the values by changing the "test_pointless_function" values in tests.py file
 unit_test:
   stage: test
   image: python:3.6
@@ -27,9 +21,7 @@ unit_test:
 # Build and push Docker image
 docker_build:
   stage: build
-  image:
-    name: docker:stable
-    entrypoint: ["", ""]
+  image: docker:stable
   services:
     - docker:dind
   script:
